@@ -1,4 +1,5 @@
 'use client';
+import { Button } from "@/components/Button";
 import { Lightning } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,12 +12,12 @@ export default function Home() {
           <Image src='/logo.svg' alt='Logo' width={85} height={44} />
         </Link>
 
-        <button className="flex items-center justify-center px-4 py-2 gap-2 rounded-lg transition-all bg-gradient-to-r from-brand-purple to-brand-pink hover:from-brand-purple-light hover:to-brand-pink-light">
+        <Button>
           Nova recomendação
           <div className="flex items-center justify-center w-8 h-8 rounded-full shrink-0 bg-white bg-opacity-20">
             <Lightning size={18} />
           </div>
-        </button>
+        </Button>
       </header>
     </main>
   )
