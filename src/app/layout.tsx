@@ -6,8 +6,11 @@ import Provider from '@/components/Provider'
 const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Move AI',
+  title: 'Movie AI',
   description: 'Generate movies to you watch!',
+  icons: {
+    icon: '/logo.svg'
+  }
 }
 
 export default function RootLayout({
