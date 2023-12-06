@@ -26,4 +26,17 @@ const HoverCardContent = React.forwardRef<
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 
-export { HoverCard, HoverCardTrigger, HoverCardContent };
+const HoverCardArrow = React.forwardRef<
+  React.ElementRef<typeof HoverCardPrimitive.Arrow>,
+  React.ComponentPropsWithoutRef<typeof HoverCardPrimitive.Arrow>
+>(({ className, ...props }, ref) => (
+  <HoverCardPrimitive.Arrow
+    ref={ref}
+    className={cn("fill-popover", className)}
+    {...props}
+  />
+));
+
+HoverCardArrow.displayName = HoverCardPrimitive.Arrow.displayName;
+
+export { HoverCard, HoverCardTrigger, HoverCardContent, HoverCardArrow };
