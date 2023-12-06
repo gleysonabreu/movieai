@@ -43,7 +43,7 @@ export default function Home() {
       {data && (
         <section className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 w-full justify-items-center">
           {data.results.map((film: CardProps) => {
-            const poster_path = `https://image.tmdb.org/t/p/original/${film.poster_path}`;
+            const poster_path = `${process.env.NEXT_PUBLIC_TMDB_URL_POSTER}/${film.poster_path}`;
             return (
               <Card
                 key={film.id}
