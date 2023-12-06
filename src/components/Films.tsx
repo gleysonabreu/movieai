@@ -28,6 +28,7 @@ export async function Films() {
             release_date={new Date(film.release_date).getFullYear().toString()}
             title={film.title}
             vote_average={film.vote_average}
+            overview={film.overview}
           />
         );
       })}
